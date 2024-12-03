@@ -1,0 +1,139 @@
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1d3557, #457b9d);
+    color: #f1faee;
+  }
+  
+  .container {
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f1faee;
+  }
+  
+  .timer-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    font-size: 1rem;
+    color: #f1faee;
+  }
+  
+  input {
+    width: 80px;
+    padding: 10px;
+    border: 2px solid #a8dadc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: #1d3557;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #1d3557;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background: #1d3557;
+  }
+  
+  button.hidden {
+    display: none;
+  }
+  
+  /* Countdown Display */
+  .countdown-display {
+    margin: 20px 0;
+  }
+  
+  .circle {
+    width: 150px;
+    height: 150px;
+    border: 10px solid #a8dadc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .circle.bouncing {
+    animation: pulse 1.5s infinite;
+  }
+  
+  .circle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 10px solid #1d3557;
+    border-radius: 50%;
+    animation: spin 10s linear infinite;
+  }
+  
+  #countdown {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f1faee;
+  }
+  
+  /* Animations */
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    }
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
