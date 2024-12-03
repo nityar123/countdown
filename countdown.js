@@ -18,7 +18,6 @@ function startCountdown() {
     return;
   }
 
-  // Calculate total seconds
   let totalSeconds = minutes * 60 + seconds;
 
   if (totalSeconds <= 0) {
@@ -36,12 +35,9 @@ function startCountdown() {
       countdownDisplay.textContent = "Time's Up!";
       countdownDisplay.style.color = '#e63946';
       
-      // Play alarm sound when time's up
       alarmSound.play();
 
-      // Stop bouncing animation
-      circle.classList.remove('bouncing');
-
+      circle.classList.remove('bouncing'); // Stop bouncing animation
       return;
     }
 
