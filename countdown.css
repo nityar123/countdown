@@ -67,9 +67,10 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
   }
-  
+
+
   button:hover {
-    background: #1d3557;
+    background: #1d3557;  /* no difference for now */
   }
   
   button.hidden {
